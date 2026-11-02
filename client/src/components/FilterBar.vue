@@ -101,28 +101,25 @@ export default {
 </script>
 
 <style scoped>
+/* Lives inside App.vue's .topbar now, which owns stickiness, background and
+ * the hairline; this component only lays out its own controls. */
 .filters-bar {
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0.75rem 0;
-  position: sticky;
-  top: 70px;
   z-index: 90;
 }
 
 .filters-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-3);
 }
 
 .filters-grid {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-3);
   flex: 1;
 }
 
@@ -133,7 +130,7 @@ export default {
 }
 
 .filter-group label {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   color: #64748b;
   white-space: nowrap;
@@ -143,13 +140,13 @@ export default {
   padding: 0.4rem 0.75rem;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
-  font-size: 0.813rem;
+  font-size: 0.8125rem;
   color: #0f172a;
   background: white;
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 500;
-  min-width: 140px;
+  min-width: 120px;
 }
 
 .filter-select:hover {
